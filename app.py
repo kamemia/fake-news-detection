@@ -21,6 +21,12 @@ app_mode = st.sidebar.selectbox('Select Page',['Home','Prediction'])
 if app_mode=='Home':
     st.title('Fake News Prediction:')  
     st.image('Newspaper.jpg')
-    st.markdown('Dataset :')
+    st.markdown('Dataset for fake news:')
     data=pd.read_csv('data/fake.csv')
     st.write(data.head())
+    st.markdown('Dataset for true news:')
+    data=pd.read_csv('data/True.csv')
+    st.write(data.head())
+
+elif app_mode == 'Prediction':
+    st.title('Predict the news')
