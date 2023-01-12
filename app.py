@@ -5,6 +5,10 @@ import pickle
 import re
 import string
 
+# Import the model
+pickled_model = pickle.load(open('model.pkl', 'rb'))
+pickled_model.predict(X_test)
+
 # Creating a menu tab 
 
 @st.cache(suppress_st_warning=True)
